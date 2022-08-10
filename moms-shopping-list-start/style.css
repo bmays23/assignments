@@ -1,5 +1,6 @@
 .title {
     text-align: center;
+    color: mediumslateblue;
 }
 
 .main {
@@ -18,7 +19,7 @@
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 0px;
     box-sizing: border-box;
 }
 
@@ -33,10 +34,29 @@
 
 #list > li{
     list-style-type: none;
-    margin: 10px auto;
+    margin: 5px auto;
 }
 
 #list div {
     margin-bottom: 10px;
     text-align: center;
+}
+
+.addButton {
+    text-align: right;
+}
+
+.button {
+    background-color: cornflowerblue;
+    border-color: cornflowerblue;
+}
+
+.editButton {
+    background-color: cornflowerblue;
+    border-color: cornflowerblue;  
+}
+
+.deleteButton {
+    background-color: crimson;
+    border-color: crimson; 
 }
