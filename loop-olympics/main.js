@@ -15,4 +15,18 @@ var fruit = ["banana", "orange", "apple", "kiwi"]
 for(var i = 0; i < fruit.length; i++) {
     console.log(fruit[i])
 }
+
+
+for(var i = 0; i <= 100; i++) {
+    if(i % 3 === 0) {
+        console.log(i)
+    }
+}
 */
+
+var numbers = []
+
+for(var i = 0; i <= 9; i++) {
+    numbers.push(i)
+    console.log(numbers)
+}
