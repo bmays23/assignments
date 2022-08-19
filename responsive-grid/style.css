@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    font-size: 0px;
+}
+
+ 
+#main {
+    position: absolute;
+    border: 2px solid black;
+    width: 80%;
+    height: 500px;
+    margin: auto;
+} 
+
+#box > h1 {
+    background-color: #F5C6D6;
+    width: 80%;
+    height: 100px;
+
+
+}
