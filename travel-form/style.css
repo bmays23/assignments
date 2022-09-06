@@ -1,0 +1,35 @@
+
+body {
+    background-color: bisque;
+    font-family: 'Courier New', Courier, monospace;
+    color: crimson;
+    text-align: center;
+}
+
+#header {
+    text-align: center;
+    font-size: 80px;
+    margin: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    color: crimson;
+}
+
+input[name] {
+    margin: 3px;
+}
+
+input[age] {
+    margin: 3px;
+}
+
+input[gender] {
+    margin: 3px;
+}
+
+input[city] {
+    margin: 5px;
+}
+
+input[diet] {
+    margin: 5px;
+}

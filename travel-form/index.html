@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SkyHigh Travel Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">SkyHigh Travel</header>
+    <form name="travelForm">
+        Name:
+        <input type="text" placeholder="First Name" name="firstName" required/>
+        <input type="text" placeholder="Last Name" name="lastName" required/>
+
+        <br>
+        Age:
+        <input type="number" name="age" required/>
+        
+        <br>
+        Male: <input type="radio" name="gender" value="Male"/>
+        Female: <input type="radio" name="gender" value="Female"/>
+        
+        <br>
+        Location:
+        <select name="city">
+            <option value="tokyo">Tokyo</option>
+            <option value="savannah">Savannah</option>
+            <option value="madrid">Madrid</option>
+        </select>
+
+        <br>
+        Dietary Restrictions:
+        Vegetarian <input type="checkbox" name="diet" value="Vegetarian"/>
+        Lactose Free <input type="checkbox" name="diet" value="Lactose Free"/>
+        Nut Allergy <input type="checkbox" name="diet" value="Nut ALlergy"/>
+        Other <input type="text" name="diet"/>
+
+        <br>
+        <button>Let's Fly</button>
+
+
+
+
+    </form>
+    <script src="main.js"></script>    
+</body>
+</html>
