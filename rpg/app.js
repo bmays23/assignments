@@ -20,7 +20,6 @@ function random(min, max) {
 
 function walk() {
     const dragon = dragons [Math.floor(Math.random() * dragons.length)];
-    const decide = ["run", "attack"];
     let dragonHealth = 80;
     let inventory = powerUps[Math.floor(Math.random() * powerUps.length)]
     
@@ -30,12 +29,13 @@ function walk() {
         return playerHealth = 0;
     } else if (options[choice] == "print") {
         console.log(playerName + "'s Health Points: " + playerHealth + "\nInventory: " + playerPowerUp);
+        walk();
     } else if (options[choice] == "walk") {
         let scenario = Math.random();
-        if (scenario < .1) {
+        if (scenario < .25) {
             console.log("What a beautiful land! Let's wander some more.");
         }
-        else if (scenario < .25) {
+        else if (scenario < .30) {
             console.log("I wonder if we'll run into a dragon!");
         }
         else {
@@ -44,7 +44,7 @@ function walk() {
             while (dragonHealth > 0 && playerHealth > 0) {
                 const runFight = readline.question("Enter 1 to run or 2 to attack: ");
                 
-                //The user can decide to attack or run
+                //The user can decide to attack or run (switch statement)
                 //If attacking, a random amount of damage will be dealt between a min and max
                 //If running, there will be a 50% chance of escaping
                 switch (runFight) {                    
