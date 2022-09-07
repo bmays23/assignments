@@ -19,11 +19,26 @@ form.addEventListener("submit", function(event) {
     const name = form.firstName.value + " " + form.lastName.value
     const age = form.age.value
     const gender = form.gender.value
+    const location = form.city.value
+    const dietary = []
+    const other = []
 
-    alert(name + "\n" + age + "\n" + gender)
+    for(let i = 0; i < form.diet.length; i++) {
+        if(form.diet[i].checked) {
+            dietary.push(form.diet[i].value)
+        }
+
+    }
+
+    other.push(form.otherDiet.value)
+
+    alert(name + "\n" + age + "\n" + gender + "\n" + location + 
+    "\n" + dietary + "\n" + other)
 
     form.firstName.value = ""
     form.lastName.value = ""
-    form.age.value= ""
+    form.age.value = ""
+    form.otherDiet.value = ""
+
 
 })
