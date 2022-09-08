@@ -1,0 +1,36 @@
+#title {
+    text-align: center;
+    font-size: 60px;
+    color: yellowgreen;
+}
+
+#flex {
+    display: flex;
+    align-items: center;
+}
+
+#goombas {
+    color: brown;
+    width: 500px;
+    display: flex;
+    border: 3px solid black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+#bobombs {
+    color: brown;
+    width: 500px;
+    display: flex;
+    border: 3px solid black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.box {
+    margin: 5px;
+}
