@@ -20,3 +20,5 @@ const display = document.getElementById("form")
     display.textContent = localStorage.getItem("count")
     display.style.fontSize = "60px"
     display.style.textAlign = "center"
+
+    
