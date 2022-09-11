@@ -23,3 +23,10 @@ console.log(string)
 //Capitalize the first letter of each name and make the rest of the characters lowercase
 
 const arr = ["ashley", "taylor", "kayla"]
+
+const newArr = arr.map(function(user) {
+    return user[0].toUpperCase() + user.substring(1);
+})
+
+
+console.log(newArr)
