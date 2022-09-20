@@ -21,4 +21,4 @@ const display = document.getElementById("form")
     display.style.fontSize = "60px"
     display.style.textAlign = "center"
 
-    
+

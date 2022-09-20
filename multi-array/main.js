@@ -40,15 +40,7 @@ var peopleArray = [
         age: 82
     }
 ]
-
-const list = peopleArray.reduce(function(final, person) {
-    if(person.age > 18) {
-        final.push(person.firstName + " " + person.lastName + " is " + person.age)
-    }
-    return final
-},[])
-
-list.sort(function(a, b) {
+peopleArray.sort(function(a, b) {
     if(a.lastName < b.lastName) {
         return -1
     }
@@ -56,5 +48,16 @@ list.sort(function(a, b) {
         return 1
     }
     return 0
+}) 
+const list = peopleArray.reduce(function(final, person) {
+    if(person.age > 18) {
+        final.push(person.firstName + " " + person.lastName + " is " + person.age)
+    }
+    return final
+},[]) 
+
+newList = list.map(function(person){
+    return "<li>" + person + "</li>"
 })
 
+console.log(newList)
