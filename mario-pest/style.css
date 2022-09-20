@@ -31,6 +31,17 @@
     margin: 10px;
 }
 
+#cheep {
+    color: brown;
+    width: 500px;
+    display: flex;
+    border: 3px solid black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
 .box {
     margin: 5px;
 }
