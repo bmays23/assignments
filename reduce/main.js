@@ -91,10 +91,21 @@ var voters = [
 ]
 
 const tracker = voters.reduce(function(final, voter) {
-    if(voter.voted && voter.age >= 18) {
-        final.canVote++
+    if(voter.age >= 18 && voter.age <= 25) {
+        final.youngVote++
+    } else if(voter.age >= 26 && voter.age <= 35) {
+        final.midVote++
+    } else if(voter.age >= 36 && voter.age <= 55) {
+        final.oldVote++
+    }
+    if(voter.voted && voter.age >= 18 && voter.age <= 25) {
+        final.youngVoted++
+    } else if(voter.voted && voter.age >= 26 && voter.age <= 35) {
+        final.midVoted++
+    } else if(voter.voted && voter.age >= 36 && voter.age <= 55) {
+        final.oldVoted++
     }
     return final
-}, {canVote: 0})
+}, {youngVote: 0, midVote: 0, oldVote: 0,youngVoted: 0, midVoted: 0, oldVoted: 0})
 
 console.log(tracker)
