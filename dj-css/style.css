@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    font-size: 0px;
+}
+
+#container {
+    display: flex;
+    width: 100%;
+    height: 800px;
+    justify-content: center;
+    align-items: center;
+}
+
+#box > h1 {
+    background-color: #edb5ce;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    border: 10px solid white;
+    border-width: thick;
+    transition-property: background-color;
+    transition-duration: 800ms;
+    transition-timing-function: ease-in-out;
+}
+
+#box > h1:hover {
+    background-color: #2ebbee;
+}
+
+#box > h2 {
+    background-color: palevioletred;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    border: 10px solid white;
+    border-width: thick;
+    transition-property: opacity;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in;
+}
+
+#box > h2:hover {
+    opacity: 20%;
+}
+
+#box > h3 {
+    background-color: #EE2E84;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    border: 10px solid white;
+    border-width: thick;
+    transition-property: height;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+}
+
+#box > h3:hover {
+    height: 100px;
+}
+
+#box > h4 {
+    background-color: #dc7ba7;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    border: 10px solid white;
+    border-width: thick;
+    transition-property: width;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in;
+}
+
+#box > h4:hover {
+    width: 100px;
+}
+
+#box > h5 {
+    background-color: #ee83d7;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    border: 10px solid white;
+    border-width: thick;
+    transition-property: border-radius;
+    transition-duration: 600ms;
+    transition-timing-function: ease-in;
+}
+
+#box > h5:hover {
+    border-radius: 100px;
+}
+
+#box > h6 {
+    background-color: #e637c9;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    border: 10px solid white;
+    border-width: thick;
+    transition-property: box-shadow;
+    transition-duration: 800ms;
+    transition-timing-function: ease-in-out;
+}
+
+#box > h6:hover {
+    box-shadow: 20px 40px;
+}
