@@ -1,0 +1,48 @@
+#zen {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+}
+#header {
+    text-align: center;
+    color: azure;
+    height: 300px;
+    grid-column: 1/3;
+    background: url(http://www.csszengarden.com/214/huntington.jpg);
+}
+
+#header > h1 {
+    font-family: 'Julius Sans One', sans-serif;
+    padding-top: 60px 0 5px 0;
+    margin: 55px 0 0 0;
+    font-size: 55px;
+    font-weight: lighter;
+    
+    
+
+}
+#header > h1::before {
+    content: "";
+    background: url(http://www.csszengarden.com/214/enso.svg);
+    position: relative;
+    background-size: 100%;
+    display: inline-block;
+    margin: 20px 20px -60px 0;
+    width: 100px;
+    height: 100px;
+}
+#header > h2 {
+    font-style: italic;
+    font-size: 30px;
+    font-weight: lighter;
+    opacity: 50%;
+
+}
+#header > h2::before {
+    content: "";
+    padding: 50px;
+}
+#circle {
+    width: 100px;
+    height: 100px;
+}
