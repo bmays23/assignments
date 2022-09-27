@@ -1,0 +1,34 @@
+{
+    "appetizers" : [
+        {
+            "name" : "curly cheese fries",
+            "ingredients" : ["potatoes", "cheddar cheese", "bacon"],
+            "description" : "Oooey Gooey cheesy curly fries topped with bacon."
+            
+        },
+        {
+            "name" : "Caprese Salad",
+            "ingredients" : ["baby lettuce", "basil", "mozzarella", "tomatoes", "balsamic"],
+            "description" : "A classic Caprese salad with layers of basil, mozzarella, and tomatoes drizzled with balsamic"
+            
+        }
+    ],
+
+    "cold sandwiches" : [
+        {
+            "name" : "turkey club",
+            "ingredients" : ["whole wheat bun", "turkey deli", "lettuce", "tomato", "provolone"],
+            "description" : "A classic turkey sandwich with lettuce and tomato."
+        },
+        {
+            "name" : "tuna sandwich",
+            "ingredients" : ["whole wheat bread", "wild caught tuna", "lettuce", "mayo"],
+            "description" : "A simple tuna sandwich that packs a fresh punch."
+        }
+    ],
+    "hot sandwiches" : [
+        {
+            "name" : "meatball sub"
+        }
+    ]
+}
