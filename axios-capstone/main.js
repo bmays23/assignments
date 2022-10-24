@@ -34,7 +34,15 @@ todoForm.addEventListener("submit", function(e){
     todoForm.title.value = ""
     
     axios.post("https://api.vschool.io/brittanymays/todo", newTodo)
-        .then(res => getTodo())
+        .then(res => getStuff(data))
         .catch(err => console.log(err))
 })
 
+function getStuff(data){
+    const newTitleDiv = document.createElement("h1")
+
+    newTitleDiv.textContent = data.title.value
+
+    document.body.appendChild(newTitleDiv)
+    
+}

@@ -1,0 +1,18 @@
+body {
+    font-family: 'Kanit', sans-serif;
+}
+
+#title {
+    text-align: center;
+    font-size: 30px;
+}
+
+#input-field {
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+}

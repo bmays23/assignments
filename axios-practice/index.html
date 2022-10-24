@@ -1,8 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,100&display=swap" rel="stylesheet">
     </head>
     <body>
+        <header id = "title">
+            <h1>My To-do List</h1>
+        </header>
+        <div id = "container">
+            <form name="main-todo"> 
+                <input type="text" id = "input-field" placeholder="Title" name="main-title" required>
+                <input type="text" id = "input-field" placeholder="Description" name="main-disc">
+                <input type="number" id = "input-field" placeholder="Cost" name="main-price">
+                <input type="img" id = "input-field" placeholder="Picture(URL)" name="main-img">
+                <button name="submit-button">Submit</button>
+            </form>
+
+        </div>
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
         <script src="main.js"></script>
     </body>
