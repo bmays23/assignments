@@ -24,7 +24,6 @@ mainForm.addEventListener("submit", (event) => {
         title: mainForm['main-title'].value,
         description: mainForm['main-disc'].value,
         price: mainForm['main-price'].value,
-        imgUrl: mainForm['main-img'].value
     }
     
     axios.post("https://api.vschool.io/brittanymays/todo", newTodo)
@@ -40,18 +39,18 @@ function getTodo (data){
     const newDiscDiv = document.createElement("h3")
     const newPriceDiv = document.createElement("h2")
     const newEditButton = document.createElement("button")
-    const newImgDiv = document.createElement("img")
     const newDeleteButton = document.createElement("button")
-    const newcheckboxDiv = document.createElement("INPUT");
+    const newcheckboxDiv = document.createElement("input");
     newcheckboxDiv.setAttribute("type", "checkbox");
     
     newTitleDiv.textContent = data.title
     newDiscDiv.textContent = data.description
     newPriceDiv.textContent = data.price
-    newDeleteButton.textContent = "delete"
-    newEditButton.textContent = "edit"
-    newImgDiv.src = data.imgUrl
-    newDiv.style.border = "transparent 30px solid"
+    newDeleteButton.textContent = "Delete"
+    newEditButton.textContent = "Edit"
+    newDiv.style.border = "5px dashed olive"
+    newDiv.style.margin = "10px"
+    newDiv.style.padding = "10px"
     
     document.body.append(newDiv)
     newDiv.appendChild(newTitleDiv)
@@ -59,11 +58,10 @@ function getTodo (data){
     newDiv.appendChild(newPriceDiv)
     newDiv.appendChild(newDeleteButton)
     newDiv.appendChild(newEditButton)
-    newDiv.appendChild(newImgDiv)
     newDiv.appendChild(newcheckboxDiv)
 
     if (data.completed){
-        lineThrough (newTitleDiv, newDiscDiv, newPriceDiv, newImgDiv, newcheckboxDiv)
+        lineThrough (newTitleDiv, newDiscDiv, newPriceDiv, newcheckboxDiv)
     }
 
     //PART 3- PUT PART 1
@@ -72,13 +70,27 @@ function getTodo (data){
             axios.put("https://api.vschool.io/brittanymays/todo/"+data._id, completedTrue)
             .catch(error => console.log(error))
 
-            lineThrough (newTitleDiv, newDiscDiv, newPriceDiv, newImgDiv, newcheckboxDiv)
+            lineThrough (newTitleDiv, newDiscDiv, newPriceDiv, newcheckboxDiv)
           } else {
             axios.put("https://api.vschool.io/brittanymays/todo/"+data._id, completedfalse)
 
-            undoLine(newTitleDiv, newDiscDiv, newPriceDiv, newImgDiv, newcheckboxDiv)
+            undoLine(newTitleDiv, newDiscDiv, newPriceDiv, newcheckboxDiv)
         }
     })
+
+    function lineThrough(title, disc, price, checkBox) {
+        title.style.textDecorationLine = "line-through";
+        disc.style.textDecorationLine = "line-through";
+        price.style.textDecorationLine = "line-through"
+        checkBox.checked = true;
+    }
+    
+    function undoLine (title, disc, price, checkBox) {
+        title.style.textDecorationLine = null;
+        disc.style.textDecorationLine = null;
+        price.style.textDecorationLine = null
+        checkBox.checked = false;
+    }
 
      //PART 4- DELETE
      newDeleteButton.addEventListener("click",() =>{
@@ -107,6 +119,11 @@ function getTodo (data){
         editItemDisc.setAttribute("type", "text");
         newDiv.append(editItemDisc)
 
+        const editItemPrice = document.createElement("input")
+        editItemPrice.value = newPriceDiv.textContent
+        editItemPrice.setAttribute("type", "number");
+        newDiv.append(editItemPrice)
+
         var submit = document.createElement("button")
         submit.textContent = "Submit"
         newDiv.append(submit)
@@ -115,9 +132,11 @@ function getTodo (data){
             //console.log(editItem.value)
             newTitleDiv.textContent = editItemTitle.value
             newDiscDiv.textContent = editItemDisc.value
+            newPriceDiv.textContent = editItemPrice.value
             submit.remove()
             editItemTitle.remove()
             editItemDisc.remove()
+            editItemPrice.remove()
         })
     })
 
@@ -125,18 +144,4 @@ function getTodo (data){
     
 }
 
-function lineThrough(title, disc, price, img, checkBox) {
-    title.style.textDecorationLine = "line-through";
-    disc.style.textDecorationLine = "line-through";
-    price.style.textDecorationLine = "line-through"
-
-    checkBox.checked = true;
-}
-
-function undoLine (title, disc, price, img, checkBox) {
-    title.style.textDecorationLine = null;
-    disc.style.textDecorationLine = null;
-    price.style.textDecorationLine = null
-    checkBox.checked = false;
-}
 
