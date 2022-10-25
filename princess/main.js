@@ -1,4 +1,4 @@
-const readline = require("readline-sync");
+/*const readline = require("readline-sync");
 
 class Player {
     constructor(name) { 
@@ -65,3 +65,19 @@ const input = readline.question("Name your player: ")
 const user = new Player(input)
 
 var intervalID = setInterval(random, 2000);
+*/
+
+
+const people = [ "John", "Adam", "Amber" ]
+
+function peopleElements(arr) {
+   const newPeopleElements = arr.map(people => {
+        return `<h1>${people}</h1>`
+    })
+    return newPeopleElements
+}
+
+console.log(peopleElements(people))
+//Given the following code below, write a function that uses  .map()  to wrap each name of the array in an <h1> opening and closing tag.
+
+//Expected Output: [ "<h1>John</h1>", "<h1>Adam</h1>", "<h1>Amber</h1>" ]
