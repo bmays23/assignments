@@ -12,19 +12,37 @@ body {
 
 .main-pic {
     border-radius: 10px 10px 0px 0px;
-    margin-top: 40px;
+    width: 317px;
+    height: auto;
+    margin: 0px;
+    position: absolute;
+    top: 44px;
+    left: 675px;
+    
+    
+    
 
 }
 
 main {
     background-color: #1A1B21;
+    width: 317px;
+    height: 400px;
     position: absolute;
-    width: 270px;
-    height: 399px;
-    left: 170px;
-    top: 400px;
+    top: 500px;
+    left: 675px;
 
 
+}
+
+.footer {
+    background: #161619;
+    border-radius: 0px 0px 10px 10px;
+    width: 317px;
+    height: 64px;
+    position: absolute;
+    top: 900px;
+    left: 675px;
 }
 
 main > h1 {
@@ -67,3 +85,47 @@ main > h3 {
     font-size: 14px;
     line-height: 16px;
 }
+
+.body-container {
+    text-align: left;
+    margin: 40px;
+
+
+}
+
+.about {
+    color: white;
+    font-size: 20px;
+    line-height: 55px;
+    margin-bottom: 0px;
+    
+    
+}
+
+.first-paragraph {
+    color: white;
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 0px;
+    font-style: normal;
+    
+}
+.interests {
+    color: white;
+    font-size: 20px;
+    line-height: 55px;
+    margin-bottom: 0px;
+    
+    
+}
+
+.second-paragraph {
+    color: white;
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 0px;
+    font-style: normal;
+    
+}
+
+
