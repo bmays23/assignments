@@ -5,13 +5,13 @@ export default function Card(props) {
         <div className="card">
             <img src={props.img} className="card--image" />
             <div className="card--stats">
-                <img src={props.img} className="card--star" />
+                <img src="./src/star.png" className="card--star" />
                 <span>{props.rating}</span>
                 <span className="gray">({props.reviewCount}) • </span>
-                <span className="gray">{props.country}</span>
+                <span className="gray">{props.location}</span>
             </div>
-            <p>{props.titles}</p>
-            <p><span className="bold">From ${props.price}</span> / person</p>
+            <p className="card--title">{props.title}</p>
+            <p className="card--price"><span className="bold">From ${props.price}</span> / person</p>
         </div>
     )
 }
