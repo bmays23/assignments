@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter';
+    
+}
+
+nav {
+    height: 60px;
+    display: flex;
+    padding: 20px 36px;
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+    background-color: #f55a5a;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    
+}
+
+section {
+    padding: 40px;
+}
+
+.location {
+    width: 300px;
+    font-size: 12px;
+    flex: 0 0 auto;         
+    display: flex;          
+    flex-direction: column; 
+    position: relative;
+    padding: 35px;
+}
+
+
+.pictures {
+    border-radius: 5px;
+    width: 195px;
+    height: 235px;
+}
