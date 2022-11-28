@@ -41,3 +41,28 @@ section {
     width: 195px;
     height: 235px;
 }
+
+.location--container {
+    display: flex;
+    width: 600px;
+    flex-direction: row;
+}
+
+.location--description {
+    padding: 18px;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 3px;
+}
+
+.line {
+    position: absolute;
+    width: 478px;
+    height: 0px;
+    left: 40px;
+    top: 286px;
+    border: 1px solid #F5F5F5;
+}
