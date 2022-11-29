@@ -13,6 +13,11 @@ nav {
     
 }
 
+nav:hover {
+    background-color: rgb(168, 168, 168);
+    transition-duration: 650ms;
+}
+
 ul {
     display: flex;
     flex-direction: row;
@@ -21,6 +26,11 @@ ul {
 li {
     list-style: none;
     padding: 12px;
+}
+
+li:hover {
+    color: rgb(184, 183, 183);
+    transition-duration: 500ms;
 }
 
 .header {
@@ -62,3 +72,4 @@ li {
 .list--authorDate {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
