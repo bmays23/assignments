@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Indie Flower', cursive;
+    
+}
+
+.spot--images {
+    width: 250px;
+    border-radius: 10px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    box-shadow: 2px 3px rgb(221, 213, 213);
+    
+}
+
+.list {
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    margin-top: 80px;
+    
+    
+}
+
+.spot {
+    width: 375px;
+    flex: 0 0 auto;         
+    display: flex;          
+    flex-direction: column; 
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(97, 92, 92);
+    border-style: dotted;
+}
+
+.place {
+    font-size: 30px;
+}
+
+.price {
+    font-size: 28px;
+}
+
+.time {
+    font-size: 20px;
+}
+
+.dollar--badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+    font-weight: bold;
+    font-size: 40px;
+    color: green;
+}
