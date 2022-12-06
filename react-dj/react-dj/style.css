@@ -1,0 +1,78 @@
+body{
+    background-color: white;
+    
+}
+
+.title{
+    text-align: center;
+    margin-top: 45px;
+    font-size: 40px;
+    font-style:bold;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    justify-items: center;
+
+
+
+}
+
+.box {
+    width:  300px;
+    height: 300px;
+    border: 2px solid black;
+
+}  
+
+
+
+.djSmall {
+    margin-top: 8px;
+    margin-bottom: 5px;
+    width: 300px;
+    height: 35px;
+}
+
+.djParty{
+    margin-top: 8px;
+    width: 300px;
+    height: 35px;
+    
+    
+}
+
+.leftBlue {
+    margin-bottom: 5px;
+    width: 300px;
+    height: 35px;
+}
+
+.rightBlue {
+    width: 300px;
+    height: 35px;
+}
+
+.bigOne {
+    margin-bottom: 5px;
+    width: 300px;
+    height: 35px;
+}
+
+.bigTwo{
+    width: 300px;
+    height: 35px;
+}
+
+.bigThree{
+    margin-bottom: 5px;
+    width: 300px;
+    height: 35px;
+}
+
+.bigFour {
+    width: 300px;
+    height: 35px;
+}
