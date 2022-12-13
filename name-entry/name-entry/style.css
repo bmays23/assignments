@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    
+}
+
+.title {
+    text-align: center;
+    font-size: 70px;
+    color: rgb(9, 97, 68);
+}
+
+.form {
+    text-align: center;
+}
+
+.input {
+    margin-top: 70px;
+    width: 300px;
+    height: 60px;
+    text-align: center;
+    box-shadow: 10px 10px;
+}
+
+.name {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    
+}
+
+li {
+    list-style: none;
+    font-size: 50px;
+    margin: 30px;
+}
+
+
+
+button {
+    border-radius: 100px;
+    width: 80px;
+    height: 80px;
+}
+
+button:hover {
+    background-color: greenyellow;
+    transition-duration: 600ms;
+}
