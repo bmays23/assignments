@@ -1,54 +1,19 @@
 import React from "react"
 
-export default function Badge() {
+
+export default function Badge(props) {
     return (
-        <div className="form-container">
-            <form className="badge">
-                <h2 className="title">Badge:</h2>
-                <input
-                    type="text"
-                    placeholder="First Name"
-
-                />
-                <input
-                    type="text"
-                    placeholder="Last Name"
-                
-                />
-                <br />
-
-                <input
-                    type="email"
-                    placeholder="Email"
-                
-                />
-                <input
-                    type="text"
-                    placeholder="Place of Birth"
-                
-                />
-                <br />
-
-                <input
-                    type="tel"
-                    placeholder="Phone"
-                
-                />
-                <input
-                    type="text"
-                    placeholder="Favorite Food"
-                
-                />
-                <br />
-
-                <textarea
-                    placeholder="Tell us about yourself"
-                />
-                <br />
-                <br />
-
-                <button>Submit</button>
-            </form>
+        <div className="badge-container">
+            <h2 className="badge-header">Badge:</h2>
+            <br/>
+            <p className="badge-name">{`Name: ${props.info.firstName} ${props.info.lastName}`} </p>
+            <p>Phone: {props.info.phone}</p>
+            <p>Place of Birth: {props.info.birthplace}</p>
+            <p>Email: {props.info.email}</p>
+            <p>Favorite Food: {props.info.favoriteFood}</p>
+            <br/>
+            <textarea className="badge-textarea" rows="5" value={props.info.description}/>
         </div>
+       
     )
 }

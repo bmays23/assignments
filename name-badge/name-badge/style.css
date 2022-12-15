@@ -16,13 +16,23 @@ body {
 
 }
 
+.badge-container {
+    display: grid;
+    grid-column: 2;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 0px;
+
+}
+
 .title {
     background: grey;
     height: 40px;
     margin-top: 0px;
     
 }
-.badge {
+
+
+.form{
      border: 2px solid black;
      border-radius: 5px;
      margin-top: 20px;
@@ -36,8 +46,21 @@ body {
 input, textarea {
     border: 2px solid black;
     margin: 10px;
+    font-family: 'Inter';
+}
 
+p {
+    margin: 5px;
+    font-family: 'Inter';
+    
 
+    
+}
+
+.main-textarea {
+    width: 400px;
+    height: 80px;
+    
 }
 
 button {
@@ -47,4 +70,20 @@ button {
     border-radius: 5px;
     font-weight: bold;
 
+}
+
+.badge-header {
+    background: grey;
+    height: 40px;
+    margin-top: 0px;
+    grid-column: 1/3;
+    
+}
+
+.badge-textarea {
+    grid-column: 1/3;
+}
+
+.badge-name{
+    grid-column: 1/2;
 }
