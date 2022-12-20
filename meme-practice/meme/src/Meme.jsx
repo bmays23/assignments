@@ -8,6 +8,7 @@ export default function Meme() {
         randomImage: "http://i.imgflip.com/1bij.jpg" 
     })
     const [allMemes, setAllMemes] = React.useState([])
+    const [memeList, setMemeList] = React.useState([])
     
     
     React.useEffect(() => {
@@ -16,6 +17,8 @@ export default function Meme() {
             .then(data => setAllMemes(data.data.memes))
     }, [])
     
+    console.log(allMemes)
+
     function getMemeImage() {
         const randomNumber = Math.floor(Math.random() * allMemes.length)
         const url = allMemes[randomNumber].url
@@ -34,6 +37,25 @@ export default function Meme() {
         }))
     }
     
+    function handleSubmit(event) {
+        event.preventDefault()
+        setMemeList(prevState =>([
+            ...prevState,
+            meme
+        ]))
+
+    }
+
+    const list = memeList.map(info =>(
+        <Post
+            key = {info.id}
+            info = {info}
+            topText = {meme.topText}
+            bottomText = {meme.bottomText}
+            randomImage = {meme.randomImage}
+        />
+        )
+    )
 
     return (
         <main>
@@ -61,16 +83,21 @@ export default function Meme() {
                     Get a new meme image 🖼
                 </button>
             </div>
+            <form onSubmit={handleSubmit}>
+                <button>Save Me</button>
+            </form>
             <div className="meme">
                 <img src={meme.randomImage} className="meme--image" />
                 <h2 className="meme--text top">{meme.topText}</h2>
                 <h2 className="meme--text bottom">{meme.bottomText}</h2>
             </div>
+            {list}
             
         </main>
         
     )
-
+    
+    
 
 
     

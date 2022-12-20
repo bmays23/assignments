@@ -4,11 +4,10 @@ export default function Post(props) {
   
     return (
         <div className="meme">
-             
-            <div>
-                <button className="formButton">Delete</button>        
-                <button className="formButton">Edit</button>        
-            </div>
+            <img src={props.randomImage}></img>
+            <h1 className="topText">{props.topText}</h1>
+            <h1 className="bottomText">{props.bottomText}</h1>       
+            
         </div>
     )
 }
