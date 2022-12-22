@@ -9,6 +9,7 @@ export default function Meme() {
     })
     const [allMemes, setAllMemes] = React.useState([])
     const [memeList, setMemeList] = React.useState([])
+    const [memeEdit, setMemeEdit] = React.useState({meme})
     
     
     React.useEffect(() => {
@@ -46,13 +47,22 @@ export default function Meme() {
 
     }
 
-    const list = memeList.map(info =>(
-        <Post
-            key = {info.id}
-            info = {info}
+   
+
+    function deleteMeme() {
+        let arr = memeList.slice(0, -1)
+        setMemeList(arr)
+    } 
+
+    
+    const list = memeList.map(meme =>(
+        <Post 
+       
             topText = {meme.topText}
             bottomText = {meme.bottomText}
             randomImage = {meme.randomImage}
+            deleteMeme = {deleteMeme}
+            editMeme = {editMeme}
         />
         )
     )
@@ -84,7 +94,9 @@ export default function Meme() {
                 </button>
             </div>
             <form onSubmit={handleSubmit}>
-                <button>Save Me</button>
+                <button className="save--button">
+                    Save Me
+                </button>
             </form>
             <div className="meme">
                 <img src={meme.randomImage} className="meme--image" />
