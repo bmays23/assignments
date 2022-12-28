@@ -9,7 +9,7 @@ export default function Meme() {
     })
     const [allMemes, setAllMemes] = React.useState([])
     const [memeList, setMemeList] = React.useState([])
-    const [memeEdit, setMemeEdit] = React.useState({meme})
+    
     
     
     React.useEffect(() => {
@@ -53,7 +53,7 @@ export default function Meme() {
         let arr = memeList.slice(0, -1)
         setMemeList(arr)
     } 
-
+    //filter-using ID
     
     const list = memeList.map(meme =>(
         <Post 
@@ -62,7 +62,7 @@ export default function Meme() {
             bottomText = {meme.bottomText}
             randomImage = {meme.randomImage}
             deleteMeme = {deleteMeme}
-            editMeme = {editMeme}
+            
         />
         )
     )
