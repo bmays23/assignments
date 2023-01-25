@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import ThemeContext from './themeContext';
 
-function Body() {
+function Body(props) {
+
+    const context = useContext(ThemeContext)
+
     return (
-        <button> Change Themee </button>
+        
+        <div className={`${context}-theme`}>
+            <h2>You are currently using {context} mode</h2>
+            <button className={`${context}-theme`}> Change Theme </button>
+
+        </div>
     )
 }
 
