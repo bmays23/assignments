@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import ThemeContext from './themeContext';
+import {ThemeContext} from './themeContext';
 
 function Body(props) {
 
@@ -7,9 +7,9 @@ function Body(props) {
 
     return (
         
-        <div className={`${context}-theme`}>
-            <h2>You are currently using {context} mode</h2>
-            <button className={`${context}-theme`}> Change Theme </button>
+        <div className={`${context.color}-theme`}>
+            <h2>You are currently using {context.color} mode</h2>
+            <button onClick={context.toggleTheme} className={`${context.color}-theme`}> Change Theme </button>
 
         </div>
     )

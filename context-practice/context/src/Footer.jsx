@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import {ThemeContext} from './themeContext';
 
-function Footer() {
+function Footer(props) {
+
+    const context = useContext(ThemeContext)
+
     return (
-        <h3 className='light-theme'>
+        <h3 className={`${context.color}-theme`}>
             FooterFooterFooter
         </h3>
     )

@@ -1,17 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Body from './Body';
-import ThemeContext from './themeContext';
+import {ThemeContextProvider} from './themeContext';
 
-function App() {
+function App(props) {
+
+
     return (
         <div className="container">
-        <ThemeContext.Provider value="dark">
-            <Navbar />
-            <Body />
-            <Footer />
-        </ThemeContext.Provider>
+
+            <ThemeContextProvider>
+                <Navbar />
+                <Body />
+                <Footer />
+            </ThemeContextProvider>
+        
         </div>
     )
 }
